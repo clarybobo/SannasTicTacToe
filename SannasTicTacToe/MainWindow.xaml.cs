@@ -53,8 +53,7 @@ namespace SannasTicTacToe
         private void PlayerMakesMove(Button button)
         {
             currentPlayer = Player.X;
-            button.Content = currentPlayer.ToString();
-            //button.Background = Brushes.LightBlue;
+            button.Content = currentPlayer.ToString();            
             button.IsEnabled = false;
             buttons.Remove(button);
             CheckGame();
@@ -70,8 +69,7 @@ namespace SannasTicTacToe
                 int index = random.Next(buttons.Count);
                 Button button = buttons[index];
                 buttons.RemoveAt(index);
-                button.Content = Player.O.ToString();
-                //button.Background = Brushes.LightBlue;
+                button.Content = Player.O.ToString();                
                 button.IsEnabled = false;
                 currentPlayer = Player.X;
                 CheckGame();
